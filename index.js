@@ -30,8 +30,8 @@ app.get('/', (req, res) => {
 
 const userRoutes = require('./routes/user');
 const workoutRoutes = require('./routes/workout');
-app.use(userRoutes);
-app.use(workoutRoutes);
+app.use("/users", userRoutes);
+app.use("/workouts", workoutRoutes);
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
